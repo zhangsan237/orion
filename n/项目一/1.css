@@ -1,0 +1,20 @@
+.scroll-box {
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+body {
+  min-height: 100vh;
+  /* 45度：红 → 黄 → 绿 → 蓝 */
+  background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #a3cb38);
+}
+p{
+	color:pink;
+	font-size:50px;
+}
+h1{
+	color:green;
+	text-align:center;
+}

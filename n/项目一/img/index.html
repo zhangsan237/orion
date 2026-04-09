@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460, #e94560);
+  background-size: 400% 400%;
+  animation: fluidGradient 1.5s;ease infinite;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  padding-top: 100px;
+}
+@keyframes fluidGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.star {
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: starFlow linear infinite;
+}
+@keyframes starFlow {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+.scroll-container {
+      width: 300px;
+      height: 450px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: 1px solid #ddd;
+    }
+		</style>
+	</head>
+	<body style="margin: 0; padding: 20px 0; display: flex; justify-content: center;">
+		<div class="scroll-box">
+			<p>生日快乐🎂</p>
+<div class="slider">
+	<div style="
+	  width:500px;
+	  height:650px;
+	  overflow-y: auto;
+	  overflow-x: hidden;
+	  border: 1px solid #ccc;
+	">
+  <p><img src="32.jpg" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="56.jpg" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="91.jpg" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="86.jpg" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="41.png" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="78.png" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="58.jpg" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="98.jpg" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="76.jpg" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="72.jpg" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="34.jpg" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="ovo.jpg" class="slide" width="500px" height="650px" display:block></p>
+  <p><img src="hu.jpg" class="slide" width="500px" height="650px" display:block></p>
+  <p><button class="btn prev">←</button></p>
+  <p><button class="btn next">→</button></p>
+  </div>
+</div>
+</div>
+<script>
+function createStars() {
+  const count = 160;
+  for (let i = 0; i < count; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2.5 + 1;
+    const left = Math.random() * 100;
+    const dur = Math.random()*12 + 10;
+    const delay = Math.random()*12;
+    s.style.width = s.style.height = size + 'px';
+    s.style.left = left + '%';
+    s.style.animationDuration = dur + 's';
+    s.style.animationDelay = delay + 's';
+    document.body.appendChild(s);
+  }
+}
+createStars();
+</script>
+	</body>
+</html>
